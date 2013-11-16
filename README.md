@@ -3,13 +3,7 @@
 **node-native-io** contains **sysfs** bindings for **gpio** (and when finally
 working **pwm**) in nodejs.
 
-## Installation
-
-Install **node-native-io** with [npm(1)](http://npmjs.org):
-
-    $ npm install node-native-io
-
-## Preview
+## Usage
 
     var nativeio = require('native-io');
 
@@ -18,25 +12,27 @@ Install **node-native-io** with [npm(1)](http://npmjs.org):
             .value(nativeio.GPIO.HIGH)
         ;
 
+## Installation
+
+Install **node-native-io** with [npm(1)](http://npmjs.org):
+
+    $ npm install node-native-io
+
+
 ## Documentation
 
-Basically **node-native-io** only uses a C++ add-on to sweaten access over
-the raw **fs** api.
+Basically **node-native-io** uses a C++ add-on to give a nice api to the sysfs
+filesystem api.
 
-### pwm
+### Class: PWM
 
 Going to be supported when usage through device tree overlays is possible on
 my beaglebone black with archlinux.
 
-### gpio
+#### Class: GPIO
 
 The **G**eneral **P**urpose **I**nput **O**utput module targets the sysfs api
 at `/sys/class/gpio`. 
-
-#### Class: GPIO
-
-On object creation the corresponding GPIO is created, on garbage collection it 
-should be unexported.
 
 ##### new GPIO(id)
 
@@ -46,7 +42,8 @@ should be unexported.
 
     var gpio = nativeio.createGPIO(22);
 
-Creates new gpio object for pin `id`.
+On object creation the corresponding GPIO is created, on garbage collection it 
+should be unexported.
 
 ##### gpio.direction([direction])
 
