@@ -1,0 +1,34 @@
+{
+
+    "name": "native-io",
+ 
+    "version": "0.0.0",
+  
+    "description": "sysfs gpio (and later pwm) api for nodejs",
+  
+    "author": "Bodo Kaiser <i@bodokaiser.io>",
+
+    "license": "MIT",
+  
+    "keywords": ["gpio", "addon", "sysfs"],
+  
+    "main": "lib/index.js",
+  
+    "scripts": {
+        "test": "make test",
+        "install": "make install"
+    },
+
+    "dependencies": {
+        "native-gpio": "0.0.9"
+    },
+
+    "repository": {
+        "url": "git://github.com/bodokaiser/node-native-io.git"
+    },
+  
+    "bugs": {
+        "url": "https://github.com/bodokaiser/node-native-io/issues"
+    }
+
+}
