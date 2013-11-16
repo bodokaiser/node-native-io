@@ -29,12 +29,12 @@ filesystem api.
 Going to be supported when usage through device tree overlays is possible on
 my beaglebone black with archlinux.
 
-#### Class: GPIO
+### Class: GPIO
 
 The **G**eneral **P**urpose **I**nput **O**utput module targets the sysfs api
 at `/sys/class/gpio`. 
 
-##### new GPIO(id)
+#### new GPIO(id)
 
     var gpio = new nativeio.GPIO(22);
 
@@ -45,20 +45,21 @@ at `/sys/class/gpio`.
 On object creation the corresponding GPIO is created, on garbage collection it 
 should be unexported.
 
-##### gpio.direction([direction])
-
-    if (gpio.direction() === nativeio.GPIO.IN)
-        gpio.direction(nativeio.GPIO.OUT);
-
-Returns and sets direction of a GPIO.
-
-##### gpio.value([value])
+#### gpio.value([value])
 
     if (gpio.value() === nativeio.GPIO.HIGH)
         gpio.value(native.io.GPIO.LOW);
 
 Returns and sets value of a GPIO. If direction is `IN` and you set a new 
 `value` you will get an error.
+
+
+#### gpio.direction([direction])
+
+    if (gpio.direction() === nativeio.GPIO.IN)
+        gpio.direction(nativeio.GPIO.OUT);
+
+Returns and sets direction of a GPIO.
 
 ## License
 
