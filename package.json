@@ -2,7 +2,7 @@
 
     "name": "native-io",
  
-    "version": "0.0.0",
+    "version": "0.0.1",
   
     "description": "sysfs gpio (and later pwm) api for nodejs",
   
@@ -15,7 +15,7 @@
     "main": "lib/index.js",
 
     "dependencies": {
-        "native-gpio": "0.0.9"
+        "native-gpio": "0.0.10"
     },
 
     "repository": {
