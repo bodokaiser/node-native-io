@@ -2,7 +2,7 @@
 
     "name": "native-io",
  
-    "version": "0.0.1",
+    "version": "0.0.2",
   
     "description": "sysfs gpio (and later pwm) api for nodejs",
   
